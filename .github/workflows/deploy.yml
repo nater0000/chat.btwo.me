@@ -99,7 +99,7 @@ jobs:
       #- run: npm test
       
       - name: 📂 FTP files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
             server: ${{ secrets.FTP_SITE_SERVER}}
             username: ${{ secrets.FTP_SITE_USER}}
