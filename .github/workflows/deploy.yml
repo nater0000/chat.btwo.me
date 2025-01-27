@@ -85,15 +85,15 @@ jobs:
     if: needs.set-deploy-type.outputs.target == 'ftp'
 
     strategy: 
-        app:
+        webapp:
             node-version: [22.11]
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ app.node-version }}
+      - name: Use Node.js ${{ webapp.node-version }}
         uses: actions/setup-node@v1
         with:
-            node-version: ${{ app.node-version }}
+            node-version: ${{ webapp.node-version }}
       - run: npm install
       - run: npm run build --if-present
       #- run: npm test
